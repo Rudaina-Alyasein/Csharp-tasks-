@@ -139,9 +139,9 @@ namespace task3_c_
             }
             Console.WriteLine($"the max nuber in array is : {max_num}");
             //part 6
-            int n = 5;
+         
             int currentNumber = 1;
-            for (int i = 1; i <= n; i++)
+            for (int i = 1; i <= 5; i++)
             {
 
                 for (int j = 1; j <= i; j++)
