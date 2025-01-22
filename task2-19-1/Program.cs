@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 
 
 namespace task2_c_
@@ -29,14 +30,24 @@ namespace task2_c_
             Console.WriteLine(hours + "Hours" + "," + minutes + "Minutes");
         }
 
-        static void middle(int[] arr)
+        static void middle(List <int> numbers)
         {
 
-            Array.Sort(arr);
-            int n = arr.Length;
+            //Array.Sort(arr);
+            numbers.Sort();
+            double middle;
+           
+            if (numbers.Count % 2 == 0)
+            {
+                middle =( (numbers[numbers.Count / 2] + numbers[numbers.Count / 2 - 1])) / 2.0;
 
-            int mid = arr[arr.Length / 2];
-            Console.WriteLine("the middle number i :" + mid);
+            }
+            else
+            {
+                middle=numbers[numbers.Count / 2];
+            }
+         
+            Console.WriteLine($"the middle number  {middle}" );
 
 
         }
@@ -118,7 +129,17 @@ namespace task2_c_
             //11
             Console.WriteLine(IsDivisible(4, 3));
             //12
-            int[] numbers = { 15, 20, 10 };
+            
+            List<int> numbers = new List<int>();
+            Console.WriteLine("Enter set of numbers and find the middle: first you should insert number of elements you want to add:");
+
+            int n = int.Parse(Console.ReadLine());
+            for (int i = 0; i < n; i++)
+            {
+                numbers.Add(int.Parse(Console.ReadLine()));
+            }
+
+         
             middle(numbers);
 
 

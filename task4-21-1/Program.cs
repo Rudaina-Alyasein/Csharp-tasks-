@@ -17,27 +17,7 @@ namespace task4_21_1
         public const int maxAge = 40;
 
         public string Email { get; set; }
-        public Student()
-        {
-            student_name = null;
-            student_age = 0;
-            studentID = 0;
-
-
-
-        }
-      ~Student()
-        {
-            Console.WriteLine("all objects is deleted");
-        }
-        public Student(string student_name, int student_age, int studentID)
-        {
-            this.student_name = student_name;
-            this.student_age = student_age;
-            this.studentID = studentID;
-
-
-        }
+        
         public string Student_name
         {
             set
@@ -79,6 +59,27 @@ namespace task4_21_1
                 return studentID;
             }
         }
+        public Student()
+        {
+            student_name = null;
+            student_age = 0;
+            studentID = 0;
+
+
+
+        }
+        ~Student()
+        {
+            Console.WriteLine($"object {student_name} destroyed");
+        }
+        public Student(string student_name, int student_age, int studentID)
+        {
+            this.student_name = student_name;
+            this.student_age = student_age;
+            this.studentID = studentID;
+
+
+        }
         public void getDetails()
         {
             Console.WriteLine("StudentName:"+student_name +" StudentAge :"+ student_age +" studentID : "+studentID);
@@ -90,15 +91,24 @@ namespace task4_21_1
         static void Main(string[] args)
         {
             Student s1 = new Student();
-            s1.Student_name = "Rudaina";
-            s1.Student_age = 23;
-            s1.StudentID = 1;
+            Console.WriteLine("plz insert the following info:");
+            Console.WriteLine("Student_name :");
+            s1.Student_name = Console.ReadLine();
+            Console.WriteLine("Student_age:");
+            s1.Student_age = int.Parse(Console.ReadLine());
+            Console.WriteLine("StudentID:");
+            s1.StudentID = int.Parse(Console.ReadLine());
             s1.Email = "rudaina alyasein@gmail.com";
             s1.getDetails();
             Student s2 = new Student();
-            s2.Student_name = "Ahmad";
-            s2.Student_age = 22;
-            s2.StudentID = 1001;
+            Console.WriteLine("plz insert the following info:");
+            Console.WriteLine("Student_name :");
+            s2.Student_name = Console.ReadLine();
+            Console.WriteLine("Student_age:");
+            s2.Student_age = int.Parse(Console.ReadLine());
+            Console.WriteLine("StudentID:");
+            s2.StudentID = int.Parse(Console.ReadLine());
+            s2.Email = "rudaina alyasein@gmail.com";
             s2.getDetails();
 
             Student s3 = new Student("sara", 26, 10);

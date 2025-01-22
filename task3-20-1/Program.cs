@@ -162,6 +162,7 @@ namespace task3_c_
                 }
                 Console.WriteLine();
             }
+           
             //part8
             int[] arrayOfnumbers = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
             int sumOfEven = 0;
@@ -211,7 +212,7 @@ namespace task3_c_
             Console.WriteLine("Welcome to the Hotel Reservation System, Please enter the information below.");
             for (int i = 0; i < 3; i++)
             {
-                Console.WriteLine($"Room {i + 1}:");
+                //Console.WriteLine($"Room {i + 1}:");
 
                 Console.WriteLine("Room number:");
                 int roomNum = int.Parse(Console.ReadLine());
@@ -236,9 +237,7 @@ namespace task3_c_
                 Console.WriteLine();
             }
 
-
-
-
+           
 
 
 
